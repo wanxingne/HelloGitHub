@@ -69,6 +69,7 @@ public class BaseActivity extends AppCompatActivity implements AccountManager.On
     private TextView tvMsg;
     private View mProgressView;
     private ScreenBroadcastReceiver mScreenreceiver;
+	
     private ProgressDialog mLoadingDialog;
 	private ProgressDialog mLoadingDialogTwo;
     private View mLoadingView;
@@ -91,7 +92,7 @@ public class BaseActivity extends AppCompatActivity implements AccountManager.On
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        //checkPageDepth();
+
     }
 
     /**
