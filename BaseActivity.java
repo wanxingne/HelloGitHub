@@ -70,6 +70,7 @@ public class BaseActivity extends AppCompatActivity implements AccountManager.On
     private View mProgressView;
     private ScreenBroadcastReceiver mScreenreceiver;
     private ProgressDialog mLoadingDialog;
+	private ProgressDialog mLoadingDialogTwo;
     private View mLoadingView;
     //
     public static boolean IS_LOCK_ON = false;//true：手机锁屏了/需要打开解锁界面
@@ -90,7 +91,6 @@ public class BaseActivity extends AppCompatActivity implements AccountManager.On
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        trySetupPullToRefresh();
         //checkPageDepth();
     }
 
