@@ -34,9 +34,7 @@ import com.fenqile.licai.manager.GlobalInfoManager;
 import com.fenqile.licai.nativeh5.NativeH5Util;
 import com.fenqile.licai.redpoint.client.GetUnReadMsgCallback;
 import com.fenqile.licai.redpoint.client.GetUnReadMsgClient;
-import com.fenqile.licai.redpoint.client.SetRedPointReadCallback;
-import com.fenqile.licai.redpoint.client.SetRedPointReadClient;
-import com.fenqile.licai.redpoint.model.RedPointConfig;
+
 import com.fenqile.licai.ui.gesture.UnlockGestureActivity;
 import com.fenqile.licai.ui.login.LoginActivity;
 import com.fenqile.licai.ui.main.MainActivity;
@@ -92,6 +90,9 @@ public class BaseActivity extends AppCompatActivity implements AccountManager.On
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
+        onRefreshComplete()
+        trySetupPullToRefresh();
+        //checkPageDepth();
 
     }
 
